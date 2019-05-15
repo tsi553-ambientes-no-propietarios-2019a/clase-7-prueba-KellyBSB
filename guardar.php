@@ -5,8 +5,12 @@ function redirect($url){
 	exit;
 
 }
+session_start();
 
 if($_POST){
+
+	$_SESSION['nombre'] = trim($_POST['username']);
+
 
 	$nametienda=$_POST['nametienda'];
 	$username = $_POST['username'];
